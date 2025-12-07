@@ -12,3 +12,6 @@ This repository contains the Stage 1 architecture work for the Customer Feedback
 ### Kendime Not:
 - Stage 2’de CRUD işlemleri, sentiment analizi, kelime frekansı ve sıralama fonksiyonları eklenecek.
 - Sınıfları sade bırak daha sonra genişletilecek.
+- Edited:
+- "Stage1" isminin proje uygunluğu açısından yetersiz olması sebebiyle "Feedback_Analyzer" olarak değiştirilmesine karar verildi.
+- uml diyagramı txt dosyasına ek olarak png formatında da eklendi.
