@@ -1,0 +1,42 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="uml1" name="UML">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Customer -->
+        <mxCell id="cust" value="Customer&#10;- customer_id&#10;- name" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="160" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Feedback -->
+        <mxCell id="feed" value="Feedback&#10;- text&#10;- rating&#10;- customer: Customer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="200" width="180" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Product -->
+        <mxCell id="prod" value="Product&#10;- product_id&#10;- name&#10;- feedback_list[]" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="190" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- ReviewAnalyzer -->
+        <mxCell id="an" value="ReviewAnalyzer&#10;+ analyze_sentiment()&#10;+ detect_trends()" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="240" width="210" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Customer -> Feedback -->
+        <mxCell id="c_f" edge="1" parent="1" source="cust" target="feed"
+          style="endArrow=block;endFill=1;"/>
+
+        <!-- Product -> Feedback (Aggregation) -->
+        <mxCell id="p_f" edge="1" parent="1" source="prod" target="feed"
+          style="startArrow=diamond;startFill=0;endArrow=none;"/>
+
+        <!-- Feedback -> Analyzer -->
+        <mxCell id="f_a" edge="1" parent="1" source="feed" target="an"
+          style="endArrow=open;endFill=0;"/>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
