@@ -1,0 +1,41 @@
++----------------------+
+|      Customer        |
++----------------------+
+| - customer_id        |
+| - name               |
++----------------------+
+
+           |
+           v
++----------------------+
+|      Feedback        |
++----------------------+
+| - text               |
+| - rating             |
+| - customer:Customer  |
++----------------------+
+| Not: Sentiment analizinde kullanılacak |
++----------------------+
+
+           ^
+           | Aggregation (Product has many Feedback)
++----------------------+
+|       Product        |
++----------------------+
+| - product_id         |
+| - name               |
+| - feedback_list[]    |
++----------------------+
+| Not: Stage 2'de CRUD eklenecek |
++----------------------+
+
+           |
+           v
++----------------------+
+|   ReviewAnalyzer     |
++----------------------+
+| + analyze_sentiment()|
+| + detect_trends()    |
++----------------------+
+| Not: Şu an boş, Stage 2’de dolacak |
++----------------------+
