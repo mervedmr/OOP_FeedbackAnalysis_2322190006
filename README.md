@@ -1,19 +1,23 @@
 # OOP_FeedbackAnalysis_2322190006
 ## Customer Feedback and Sentiment Analysis Platform
 ---
-## 🧱 Stage 1 – Architecture
+## 🧱 Architecture & Design
 
 ### Stage 1 Goals
 - Define core classes (Customer, Product, Feedback, ReviewAnalyzer)
-- Demonstrate Aggregation (Product → many Feedback objects)
+- Demonstrate Aggregation (Product -> many Feedback objects)
 - Provide UML and design documents
-- Prepare system structure for Stage 2
+- Apply object-oriented design principles
 
+### Design Decisions
+- Each class has a single responsibility.
+- Relationships are kept simple and readable.
+- The architecture is designed to be extendable for future stages.
 ---
 
-## ⚙️ Stage 2 – Basic Implementation
+## ⚙️ Core Functionality (Basic Implementation)
 
-### Stage 2 Goals
+### Implemented Features
 - Implement CRUD operations for Customer and Feedback
 - Perform simple word frequency analysis on feedback texts
 - Apply basic sentiment classification (positive / neutral / negative)
@@ -21,15 +25,16 @@
 
 ---
 
-## 📝 Kendime Not:
-- CRUD işlemleri, sentiment analizi, kelime frekansı ve sıralama algoritmaları eklendi.
-- Geçmişte sınıflar sade ve genişletilebilir şekilde tasarlandı.
-- ReviewAnalyzer sınıfı şu an temel seviyede bırakıldı, algoritmalar eklendi.
-- Bir sonraki güncellemede (stage3):
-  - Görselleştirme ve analiz özellikleri
-  - Web tabanlı CRUD sayfaları
-  - Zaman bazlı trend analizi
-  - Ürün sıralama ve en sık şikayet edilen konuların tespiti yapılacak.
+## 📊 Advanced Features & Analysis
+
+### Implemented Concepts
+- Trend detection based on sentiment changes
+  (improving / declining / stable)
+- Product ranking using aggregated feedback ratings
+- Detection of most frequent complaint topics
+
+> These features are implemented at a basic level,
+> focusing on clarity and alignment with course materials.
 
 ---
 
