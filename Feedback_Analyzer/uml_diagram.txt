@@ -4,6 +4,8 @@
 | - customer_id        |
 | - name               |
 +----------------------+
+| + update_name()      |
++----------------------+
 
            |
            v
@@ -12,9 +14,10 @@
 +----------------------+
 | - text               |
 | - rating             |
-| - customer:Customer  |
+| - sentiment          |
+| - customer           |
 +----------------------+
-| Not: Sentiment analizinde kullanılacak |
+|+ update_text()       |
 +----------------------+
 
            ^
@@ -26,16 +29,22 @@
 | - name               |
 | - feedback_list[]    |
 +----------------------+
-| Not: Stage 2'de CRUD eklenecek |
+| + add_feedback()     |
+| + remove_feedback()  |
+| + get_all_feedback() |
+| + get_average_rating()|
 +----------------------+
 
-           |
+           | dependency
            v
-+----------------------+
-|   ReviewAnalyzer     |
-+----------------------+
-| + analyze_sentiment()|
-| + detect_trends()    |
-+----------------------+
-| Not: Şu an boş, Stage 2’de dolacak |
-+----------------------+
++-------------------------------+
+|        ReviewAnalyzer         |
++-------------------------------+
+| - positive_words              |
+| - negative_words              |
++-------------------------------+
+| + analyze_sentiment()         |
+| + detect_sentiment_trend()    |
+| + rank_products()             |
+| + most_common_complaints()    |
++-------------------------------+
