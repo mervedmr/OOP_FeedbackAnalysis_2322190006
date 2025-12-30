@@ -1,39 +1,58 @@
-# Stage 1 – Design Overview
+# Design Overview
+Customer Feedback and Sentiment Analysis Platform
 
 ## Purpose
 This system collects feedback from customers about various products. 
-Stage 1 focuses only on architecture.
-
-## Note for myself:
-- Stage 2’de algoritmalar geleceği için sınıfları temel halinde bırak.
-- ReviewAnalyzer şu an boş, ileride doldurulacak.
+It allows analyzing customer opinions using basic and advanced algorithms.
 
 ## Class Descriptions
 
 ### Customer
-- Holds customer info.
-
+- Holds customer information (id, name)
+>
 ### Product
 - Holds product info.
 - Aggregates multiple Feedback objects.
-- Not: ileride Product içinde CRUD operasyonları için fonksiyonları yazman gerek.
-
+- Represents the main entity for analysis
+>
 ### Feedback
 - Stores text & rating.
-- Not: sentiment analizi için metin önemli.
-
+- Linked to a Customer
+>
 ### ReviewAnalyzer
-- Currently empty.
-- Not: Stage 2’de word frequency ve sentiment işlemleri buraya gelecek.
-
+- Designed as a separate analysis component
+>
 ## Aggregation
+- One Product contains multiple Feedback objects
 Product -> many Feedback
-
+>
 ## Simple Scenario
 1. Create customer
 2. Create product
 3. Customer writes feedback
 4. Add feedback to product
+>
 
-## Note for myself:
-- Stage 2’de bu senaryoya ek olarak sıralama, filtreleme gibi işlemler gelecek.
+
+# Basic Implementation
+Extends the architecture with basic functionality and algorithms.
+
+### Added Features
+- CRUD operations for Customer and Feedback
+- Simple sentiment analysis (positive / neutral / negative)
+- Word frequency analysis from feedback texts
+- Sorting feedback by rating or sentiment
+
+---
+
+# Advanced Application
+Completes the project by adding advanced analysis and application-level features.
+
+### Added Features
+- Trend detection over time (improving / declining sentiment)
+- Product ranking based on average feedback ratings
+- Detection of most frequent complaint topics
+- Preparation for visualization and reporting
+- Web-based CRUD operations and reporting pages (conceptual design)
+
+---
