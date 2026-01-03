@@ -52,7 +52,7 @@ class ReviewAnalyzer:
         self.positive_words = ["good", "great", "excellent", "perfect", "nice"]
         self.negative_words = ["bad", "poor", "terrible", "awful", "worst"]
 
-   def analyze_sentiment(self, feedback):
+    def analyze_sentiment(self, feedback):
         text = feedback.text.lower()
 
         if any(word in text for word in self.positive_words):
