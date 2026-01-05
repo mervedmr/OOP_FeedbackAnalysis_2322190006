@@ -5,7 +5,7 @@ p2 = Product(2, "Laptop")
 p3 = Product(3, "Mobile Phone")
 p4 = Product(4, "Powerbank")
 
-products = {1: p1, 2: p2, 3: p3, 4, p4}
+products = {1: p1, 2: p2, 3: p3, 4: p4}
 
 analyzer = ReviewAnalyzer()
 customer_id_counter = 1
